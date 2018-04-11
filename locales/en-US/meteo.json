@@ -1,0 +1,17 @@
+{
+  "meteo": {
+    "country": "Country",
+    "city": "City",
+    "unity": {
+      "label": "Unity",
+      "celsius": "Celsius",
+      "fahrenheit": "Fahrenheit"
+    },
+    "information": {
+      "label": "Info.",
+      "actual": "Actual weather",
+      "prevision": "Prevision"
+    },
+    "name": "Name"
+  }
+}

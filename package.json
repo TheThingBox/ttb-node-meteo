@@ -1,0 +1,21 @@
+{
+  "name": "ttb-node-meteo",
+  "version": "0.0.2",
+  "description": "This node sends weather informations",
+  "dependencies": {
+    "follow-redirects": "0.0.3"
+  },
+  "node-red": {
+    "nodes": {
+      "meteo": "meteo.js"
+    }
+  },
+  "keywords": [
+    "TheThingBox",
+    "node-red",
+    "meteo",
+    "weather"
+  ],
+  "author": "http://www.digitalairways.com/",
+  "license": "http://www.wtfpl.net"
+}
