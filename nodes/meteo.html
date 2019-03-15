@@ -1,5 +1,9 @@
 <script type="text/x-red" data-template-name="meteo">
   <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> <span data-i18n="meteo.name"></span></label>
+    <input type="text" id="node-input-name" data-i18n="[placeholder]meteo.name">
+  </div>
+  <div class="form-row">
     <label for="node-input-city"><i class="icon-tag"></i> <span data-i18n="meteo.city"></span></label>
     <input type="text" id="node-input-city" data-i18n="[placeholder]meteo.city">
   </div>
@@ -10,45 +14,35 @@
   <div class="form-row">
     <label for="node-input-unity"><i class="icon-tag"></i> <span data-i18n="meteo.unity.label"></span></label>
     <select id="node-input-unity">
-      <option value = "c" selected data-i18n="[html]meteo.unity.celsius"></option>
-      <option value = "f" data-i18n="[html]meteo.unity.fahrenheit"></option>
+      <option value="celsius" selected data-i18n="[html]meteo.unity.celsius"></option>
+      <option value="fahrenheit" data-i18n="[html]meteo.unity.fahrenheit"></option>
     </select>
   </div>
   <div class="form-row">
     <label for="node-input-weather"><i class="icon-tag"></i> <span data-i18n="meteo.information.label"></span></label>
     <select id="node-input-weather">
-      <option value = "actual" selected data-i18n="[html]meteo.information.actual"></option>
-      <option value = "prevision" data-i18n="[html]meteo.information.prevision"></option>
+      <option value="actual" selected data-i18n="[html]meteo.information.actual"></option>
+      <option value="prevision" data-i18n="[html]meteo.information.prevision"></option>
     </select>
   </div>
-   <div class="form-row">
-    <label for="node-input-name"><i class="icon-tag"></i> <span data-i18n="meteo.name"></span></label>
-    <input type="text" id="node-input-name" data-i18n="[placeholder]meteo.name">
+  <div class="form-row">
+    <label for="node-input-apiKey"><i class="icon-tag"></i> <span data-i18n="meteo.apiKey"></span></label>
+    <input type="text" id="node-input-apiKey">
   </div>
 </script>
+
 <script type="text/x-red" data-help-name="meteo">
-  <p>Returns the weather informations of a given city in
-  <code>msg.<b>payload</b></code>. Returns a weather-representation picture
-  in <code>msg.<b>picture</b></code> too.</p>
-
-  <p>We recommend you to set the city with the <b>city node</b>.</p>
-  <p>You can choose your city manually or dynamically via <code>msg.<b>city</b></code>.</p>
-  <p>You can choose your country manually or dynamically via <code>msg.<b>country</b></code>.</p>
-
-  <p>You can choose your unity (Celsius or Fahrenheit) manually or dynamically via <code>msg.<b>unity</b></code> (Default Celsius).</p>
-
-  <p>You can also choose between having the actual weather informations or
-  the prevision for today. This can be done with configuration or
-  <code>msg.<b>weather</b></code></p>
 </script>
+
 <script type="text/javascript">
   RED.nodes.registerType("meteo", {
     category: "basic",
     defaults: {
       city: {value: ""},
       country: {value: ""},
-      unity: {value: "c"},
+      unity: {value: "celsius"},
       weather: {value: "actual"},
+      apiKey: {value: ""},
       name: {value: ""}
     },
     color: "#FFF",

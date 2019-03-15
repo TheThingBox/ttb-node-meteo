@@ -1,11 +1,15 @@
 {
   "meteo": {
+    "apiKey": "API key",
     "country": "Country",
     "city": "City",
     "unity": {
       "label": "Unity",
       "celsius": "Celsius",
       "fahrenheit": "Fahrenheit"
+    },
+    "status": {
+      "fetching": "fetching data"
     },
     "information": {
       "label": "Info.",

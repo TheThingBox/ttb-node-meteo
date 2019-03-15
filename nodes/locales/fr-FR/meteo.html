@@ -1,0 +1,89 @@
+<script type="text/x-red" data-help-name="meteo">
+  <p>Récupère la météo sur openweathermap.org</p>
+
+  <h3>Entrées</h3>
+  <dl class="message-properties">
+    <dt class="optional">apiKey
+      <span class="property-type">string</span>
+    </dt>
+    <dd>La clef d'API pour openweathermap.</dd>
+
+    <dt class="optional">city
+      <span class="property-type">string</span>
+    </dt>
+    <dd>Le nom de la ville pour la météo.</dd>
+
+    <dt class="optional">country
+     <span class="property-type">string</span>
+    </dt>
+    <dd>Le nom du pays de la ville.</dd>
+
+    <dt class="optional">unity
+     <span class="property-type">string</span>
+    </dt>
+    <dd>
+      L'unité de temperature utilisée. les valeurs possibles sont:
+      <ul>
+        <li>celsius</li>
+        <li>c</li>
+        <li>fahrenheit</li>
+        <li>f</li>
+      </ul>
+    </dd>
+
+    <dt class="optional">weather
+     <span class="property-type">string</span>
+    </dt>
+    <dd>
+      Le mode de météo (actuelle ou prévision). les valeurs possibles sont:
+      <ul>
+        <li>actual</li>
+        <li>prevision</li>
+      </ul>
+    </dd>
+  </dl>
+
+  <h3>Sorties</h3>
+  <ol class="node-ports">
+    <li>Sortie standard
+      <dl class="message-properties">
+        <dt>payload
+         <span class="property-type">string</span>
+        </dt>
+        <dd>Le résultat de la recherche météo.</dd>
+      </dl>
+
+      <dl class="message-properties">
+        <dt>weather
+         <span class="property-type">Object</span>
+        </dt>
+        <dd>Les données météorologiques.</dd>
+      </dl>
+
+      <dl class="message-properties">
+        <dt>picture
+         <span class="property-type">string</span>
+        </dt>
+        <dd>le chemin d'accès de l'image représentative de la météo.</dd>
+      </dl>
+    </li>
+  </ol>
+
+  <h3>Détails</h3>
+  <p>
+    Ce node récupère la météo courante ou la prévision pour demain sur openweathermap.org pour une ville donnée en utilisant le module <code>ttb-weather</code>
+  </p>
+
+  <p>
+    Pour fonctionner, ce node a besoin d'une clef d'API openweathermap valide, une par défaut est utilisé si elle n'est pas renseignée, mais il se peut qu'elle ne fonctionne plus, car elle est partagée et limitée à 60 utilisations par minutes.
+    Pour avoir votre propre clef d'api, enregistrez-vous sur <a href="https://openweathermap.org/" target="_blank">openweathermap</a> puis allez à la rubrique <a href="https://home.openweathermap.org/api_keys" target="_blank">API keys</a>.
+    L'offre gratuite permet 60 utilisations par minute et aucune information bancaire n'est demandée.
+  </p>
+
+  <h3>Références</h3>
+  <ul>
+      <li><a href="https://github.com/TheThingBox/ttb-node-meteo" target="_blank">GitHub</a> - Le répertoire github du node</li>
+      <li><a href="https://github.com/TheThingBox/ttb-weather" target="_blank">GitHub</a> - Le répertoire github de la dépendance <code>ttb-weather</code></li>
+      <li><a href="https://openweathermap.org/" target="_blank">openweathermap</a> - Le site d'openweathermap</li>
+  </ul>
+</script>
