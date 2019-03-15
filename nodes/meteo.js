@@ -58,7 +58,7 @@ module.exports = function(RED) {
       .get()
       .then( data => {
         msg.weather = data
-        msg.payload = data.text.simple
+        msg.payload = data.text.advanced
         msg.picture = data.icon.path
         node.send(msg);
         node.status({})
