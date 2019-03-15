@@ -53,26 +53,22 @@ ttb-node-meteo is a Node-RED node that collects weather information.
 </dl>
 
 <h3>Outputs</h3>
-<ol class="node-ports">
-  <li>Standard output
-    <dl class="message-properties">
-      <dt>payload
-       <span class="property-type">string</span>
-      </dt>
-      <dd>The result of the weather research.</dd>
-      
-      <dt>weather
-       <span class="property-type">Object</span>
-      </dt>
-      <dd>The meteorological data.</dd>
-      
-      <dt>picture
-       <span class="property-type">string</span>
-      </dt>
-      <dd>the path of the representative image of the weather</dd>
-    </dl>
-  </li>
-</ol>
+<dl class="message-properties">
+  <dt>payload
+   <span class="property-type">string</span>
+  </dt>
+  <dd>The result of the weather research.</dd>
+
+  <dt>weather
+   <span class="property-type">Object</span>
+  </dt>
+  <dd>The meteorological data.</dd>
+
+  <dt>picture
+   <span class="property-type">string</span>
+  </dt>
+  <dd>the path of the representative image of the weather</dd>
+</dl>
 
 <h3>Détails</h3>
 <p>
