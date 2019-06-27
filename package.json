@@ -1,9 +1,9 @@
 {
   "name": "ttb-node-meteo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ttb-node-meteo is a Node-RED node that collects weather information.",
   "dependencies": {
-    "ttb-weather": "thethingbox/ttb-weather#9e5d64a"
+    "ttb-weather": "thethingbox/ttb-weather#702e753"
   },
   "node-red": {
     "nodes": {
